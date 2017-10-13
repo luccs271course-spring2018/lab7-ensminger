@@ -21,7 +21,7 @@ public class LinkedStack<E> implements IStack<E> {
   @Override
   public E peek() {
     // TODO
-    return null;
+    return top;
   }
 
   @Override
@@ -40,7 +40,14 @@ public class LinkedStack<E> implements IStack<E> {
   @Override
   public boolean isEmpty() {
     // TODO
-    return false;
+    if(top == null)
+    {
+      return true;
+    }
+    if(top != null)
+    {
+      return false;
+    }
   }
 
   @Override
