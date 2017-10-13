@@ -27,7 +27,14 @@ public class LinkedStack<E> implements IStack<E> {
   @Override
   public E pop() {
     // TODO
-    return null;
+    try{
+      return remove(size()-1):
+    }
+    catch(ArrayIndexOutOfBoundsException ex){
+      throw new EmptyStackException();
+      
+    }
+    }
   }
 
   @Override
