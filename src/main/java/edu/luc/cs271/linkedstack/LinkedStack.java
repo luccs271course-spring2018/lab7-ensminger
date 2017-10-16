@@ -66,7 +66,7 @@ public class LinkedStack<E> implements IStack<E> {
     // TODO add any instance variable(s) required to support this
     Node<E> top1 = top;
     while(to != null){
-      list.add(top1);
+      list.add(top1.data);
       top1=top1.next;
     }
     
