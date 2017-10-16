@@ -21,7 +21,14 @@ public class LinkedStack<E> implements IStack<E> {
   @Override
   public E peek() {
     // TODO
-    return top;
+    try{
+      return size()-1:
+    }
+    catch(ArrayIndexOutOfBoundsException ex){
+      throw new EmptyStackException();
+      
+    }
+    }
   }
 
   @Override
@@ -54,6 +61,13 @@ public class LinkedStack<E> implements IStack<E> {
   public List<E> asList() {
     // TODO implement using an ArrayList preallocated with the right size
     // TODO add any instance variable(s) required to support this
-    return null;
+    Node<E> top1 = top;
+    List <E> list = new ArrayList();
+    while(to != null){
+      list.add(top.toString());
+      top1=top1.next;
+    }
+    
+    return list;
   }
 }
