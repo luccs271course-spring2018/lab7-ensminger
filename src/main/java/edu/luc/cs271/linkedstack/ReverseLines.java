@@ -16,7 +16,7 @@ public class ReverseLines {
 			line = input.nextLine();
 			stack.push(line);
 		}
-		String response; 
+		String response = ""; 
 		while (!stack.isEmpty()){
 			response = response + stack.pop();
 			System.out.println(response);
