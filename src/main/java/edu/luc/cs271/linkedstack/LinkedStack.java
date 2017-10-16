@@ -22,27 +22,27 @@ public class LinkedStack<E> implements IStack<E> {
   public E peek() {
     // TODO
     try{
-      return size()-1:
+      return size()-1;
     }
     catch(ArrayIndexOutOfBoundsException ex){
       throw new EmptyStackException();
       
     }
     }
-  }
+  
 
   @Override
   public E pop() {
     // TODO
     try{
-      return remove(size()-1):
+      return remove(size()-1);
     }
     catch(ArrayIndexOutOfBoundsException ex){
       throw new EmptyStackException();
       
     }
     }
-  }
+  
 
   @Override
   public boolean isEmpty() {
@@ -71,3 +71,4 @@ public class LinkedStack<E> implements IStack<E> {
     return list;
   }
 }
+
