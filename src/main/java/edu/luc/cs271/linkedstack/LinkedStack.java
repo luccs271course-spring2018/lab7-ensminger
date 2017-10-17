@@ -3,17 +3,15 @@ package edu.luc.cs271.linkedstack;
 import java.util.List;
 import java.util.ArrayList;
 
-
-public class LinkedStack<E> implements IStack<E> {
+public class LinkedStack<E> implements IStack<E>{
 
   /** The topmost node of this stack. The stack gets pushed down from here. */
   private Node<E> top;
-   List <E> list = new ArrayList();
 
   // TODO why don't we need an explicit constructor?
 
   @Override
-  public E push(final E obj) {
+  public E push(final E obj){
     // TODO
     top = new Node<>(obj, top);
     return obj;
@@ -22,7 +20,7 @@ public class LinkedStack<E> implements IStack<E> {
   @Override
   public E peek() {
     // TODO
-    if(isEmpty()){
+    if(isEmpty() == true){
       throw new NoSuchElementException();
     }
     else{
@@ -30,12 +28,12 @@ public class LinkedStack<E> implements IStack<E> {
       
     }
     }
-  }
+  
 
   @Override
   public E pop() {
     // TODO
-    if(isEmpty()){
+    if(isEmpty() == true){
       throw new NoSuchElementException();
     }
     else{
@@ -45,7 +43,7 @@ public class LinkedStack<E> implements IStack<E> {
       
     }
     }
-  }
+  
 
   @Override
   public boolean isEmpty() {
@@ -65,7 +63,8 @@ public class LinkedStack<E> implements IStack<E> {
     // TODO implement using an ArrayList preallocated with the right size
     // TODO add any instance variable(s) required to support this
     Node<E> top1 = top;
-    while(to != null){
+    List<E> list = new ArrayList();
+    while(top1 != null){
       list.add(top1.data);
       top1=top1.next;
     }
@@ -73,3 +72,4 @@ public class LinkedStack<E> implements IStack<E> {
     return list;
   }
 }
+
