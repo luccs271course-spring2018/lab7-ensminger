@@ -2,6 +2,7 @@ package edu.luc.cs271.linkedstack;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 
 public class LinkedStack<E> implements IStack<E>{
 
@@ -21,8 +22,7 @@ public class LinkedStack<E> implements IStack<E>{
   public E peek() {
     // TODO
 
-    try{
-      return size()-1;
+
 
     if(isEmpty() == true){
       throw new NoSuchElementException();
@@ -33,13 +33,13 @@ public class LinkedStack<E> implements IStack<E>{
       
     }
     }
+
   
 
   @Override
   public E pop() {
     // TODO
-    try{
-      return remove(size()-1);
+    
 
     if(isEmpty() == true){
       throw new NoSuchElementException();
@@ -52,6 +52,7 @@ public class LinkedStack<E> implements IStack<E>{
       
     }
     }
+
   
 
   @Override
@@ -81,4 +82,3 @@ public class LinkedStack<E> implements IStack<E>{
     return list;
   }
 }
-
